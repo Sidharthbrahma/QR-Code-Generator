@@ -1,38 +1,27 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>QR code Generator</title>
-        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link rel="stylesheet" href="style.css"> -->
+        <title>QR Code Generator</title>
         <link rel="stylesheet" href="styles.css">
+        <!-- Add this library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     </head>
     <body>
-
-
-        <div class="grid">
-            <h1 align="center">QR Code Generator</h1>
-            <center>
-                <img src="" id="img">
-            </center>
-            
-        <select id="size">
-            <option value="100">100x100</option>
-            <option value="150">150x150</option>
-            <option value="200">200x200</option>
-            <option value="250" selected>250x250</option>
-            <option value="300">300x300</option>
-        </select>
-        <br><br>
-        <textarea placeholder="Enter your Text" id="qrtext"></textarea>
-        <br><br>
-        <input type="submit" value="Generate" onclick="genQR()">
-        
-        
-            <p>Developed by Satyam Yadav</p> 
+        <div class="container">
+            <h1>QR Code Generator</h1>
+            <div id="qrcode" class="qr-container"></div>
+            <select id="size">
+                <option value="100">100x100</option>
+                <option value="150">150x150</option>
+                <option value="200">200x200</option>
+                <option value="250" selected>250x250</option>
+                <option value="300">300x300</option>
+            </select>
+            <textarea id="qr-text" placeholder="Enter your text"></textarea>
+            <button onclick="generateQR()">Generate</button>
+            <p class="credit">Developed by Sidharth Brahma</p>
         </div>
         <script src="Qrcode.js"></script>
     </body>
